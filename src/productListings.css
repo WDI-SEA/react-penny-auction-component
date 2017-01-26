@@ -1,0 +1,18 @@
+.products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.products ul {
+  margin: 10px auto;
+  padding: 0;
+}
+
+.products .cell {
+  display: inline-block;
+  margin: 10px;
+  padding: 20px;
+  width: 150px;
+}
