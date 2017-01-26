@@ -1,20 +1,33 @@
 import React, { Component } from 'react';
-import './index.css';
+import './App.css';
 
 
-// class template extends Component {
-//
-// <div className="container">
-//   <div className="row well">
-//     <div className="">Title</div>
-//     <div className="">IMG</div>
-//     <div className="">Time Remaining</div>
-//     <div className="">Current Price</div>
-//     <div className="">Last User to bid</div>
-//     <div className="">Bid Now button</div>
-//   </div>
-// </div>
-//
-// }
-//
-// export default template;
+class template extends Component {
+
+  render() {
+    return (
+      <div className="container">
+          <div >
+          {this.props.title}
+          </div>
+          <div >
+          {this.props.img}
+          </div>
+          <div >
+          {this.props.timeLeft}
+          </div>
+          <div >
+          {this.props.currentPrice}
+          </div>
+          <div >
+          {this.props.user}
+          </div>
+          <div >
+            <button className="btn btn-warning">Bid Now</button>
+          </div>
+      </div>
+    )
+  }
+}
+
+export default template;
