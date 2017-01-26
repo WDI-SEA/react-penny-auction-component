@@ -2,27 +2,27 @@ import React, { Component } from 'react';
 import './App.css';
 
 
-class template extends Component {
+class Template extends Component {
 
   render() {
     return (
       <div className="container">
-          <div >
+          <div>
           {this.props.title}
           </div>
-          <div >
+          <div>
           {this.props.img}
           </div>
-          <div >
+          <div>
           {this.props.timeLeft}
           </div>
-          <div >
+          <div>
           {this.props.currentPrice}
           </div>
-          <div >
+          <div>
           {this.props.user}
           </div>
-          <div >
+          <div>
             <button className="btn btn-warning">Bid Now</button>
           </div>
       </div>
@@ -30,4 +30,4 @@ class template extends Component {
   }
 }
 
-export default template;
+export default Template;

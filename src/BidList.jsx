@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import template from './template';
+import Template from './Template';
 
 
 class BidList extends Component {
@@ -92,14 +91,15 @@ class BidList extends Component {
   }
 
   getItems(){
-    return this.state.items.map(item =>
-      <BidList
+    return this.state.items.map(item => {
+      return (<Template
         title={item.title}
-        title={item.img}
-        title={item.timeLeft}
-        title={item.currentPrice}
-        title={item.user}/>
-    )
+        img={item.img}
+        timeLeft={item.timeLeft}
+        currentPrice={item.currentPrice}
+        user={item.user} />
+      );
+    });
   }
 
 }
