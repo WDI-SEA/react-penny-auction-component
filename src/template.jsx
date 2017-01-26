@@ -11,7 +11,7 @@ class Template extends Component {
           {this.props.title}
           </div>
           <div>
-          {this.props.img}
+          <img src={this.props.img}/>
           </div>
           <div>
           {this.props.timeLeft}
