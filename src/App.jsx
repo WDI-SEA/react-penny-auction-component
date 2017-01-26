@@ -13,52 +13,52 @@ class App extends Component {
         { name: '$10 Shell Gift Card',
           image: "/img/$10 Shell Gift Card.jpg",
           timeStart: Date.now(),
-          timeLeft: 24,
+          timeLeft: 82400,
           currentBid: 0.00 },
         { name: '$50 Walmart Gift Card',
           image: "/img/$50 Walmart Gift Card.jpg",
           timeStart: Date.now(),
-          timeLeft: 24,
+          timeLeft: 82400,
           currentBid: 0.00 },
         { name: '15 Voucher Bids',
           image: "/img/15 Voucher Bids.jpg",
           timeStart: Date.now(),
-          timeLeft: 24,
+          timeLeft: 82400,
           currentBid: 0.00 },
         { name: '250 Voucher Bids',
           image: "/img/250 Voucher Bids.jpg",
           timeStart: Date.now(),
-          timeLeft: 24,
+          timeLeft: 82400,
           currentBid: 0.00 },
         { name: '50 Voucher Bids',
           image: "/img/50 Voucher Bids.jpg",
           timeStart: Date.now(),
-          timeLeft: 24,
+          timeLeft: 82400,
           currentBid: 0.00 },
         { name: 'Canon Pixma MG Series Wireless Printer',
           image: "/img/Canon Pixma MG Series Wireless Printer.jpg",
           timeStart: Date.now(),
-          timeLeft: 24,
+          timeLeft: 82400,
           currentBid: 0.00 },
         { name: 'Cuisinart Convection Bread Maker',
           image: "/img/Cuisinart Convection Bread Maker.jpg",
           timeStart: Date.now(),
-          timeLeft: 24,
+          timeLeft: 82400,
           currentBid: 0.00 },
         { name: 'Discrete "Hide a Key" Sprinkler Head',
           image: '/img/Discrete "Hide a Key" Sprinkler Head.jpg',
           timeStart: Date.now(),
-          timeLeft: 24,
+          timeLeft: 82400,
           currentBid: 0.00 },
         { name: 'Ultra-Soft 1800 Series Sheet Set',
           image: "/img/Ultra-Soft 1800 Series Sheet Set.jpg",
           timeStart: Date.now(),
-          timeLeft: 24,
+          timeLeft: 82400,
           currentBid: 0.00 },
         { name: 'iPad Pro 9.7" 32GB WifFi',
           image: '/img/iPad Pro 9.7" 32GB WifFi.jpg',
           timeStart: Date.now(),
-          timeLeft: 24,
+          timeLeft: 82400,
           currentBid: 0.00 }
       ]
     }
@@ -74,7 +74,8 @@ class App extends Component {
 
         <ProductListings products={this.state.products}
                         addToBid={(productIndex) => this.addToBid(productIndex)}
-                        countdownTimer={(productIndex) => this.countdownTimer(productIndex)}  />
+                        countdown={(productIndex) => this.countdown(productIndex)}
+                        addToTimeLeft={(productIndex) => this.addToTimeLeft(productIndex)}  />
 
       </div>
     );
@@ -86,8 +87,16 @@ class App extends Component {
     this.setState({products: products});
   }
 
-  countdownTimer(productIndex) {
+  addToTimeLeft(productIndex) {
+    let products = this.state.products;
+    products[productIndex].timeLeft += 10;
+    this.setState({products: products});
+  }
 
+  countdown(productIndex) {
+    let products = this.state.products;
+    products[productIndex].timeLeft -= 1;
+    this.setState({products: products});
   }
 
 }

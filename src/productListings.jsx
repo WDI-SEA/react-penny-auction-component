@@ -10,8 +10,10 @@ class ProductListings extends Component {
     const productList = this.props.products.map((product, productIndex) => {
       return <Product key={productIndex} index={productIndex}
                       name={product.name} image={product.image}
-                      timeStart={product.timeStart} currentBid={product.currentBid}
-                      addToBid={this.props.addToBid} />
+                      timeStart={product.timeStart} timeLeft={product.timeLeft}
+                      currentBid={product.currentBid}
+                      addToBid={this.props.addToBid} countdown={this.props.countdown}
+                      addToTimeLeft={this.props.addToTimeLeft} />
     });
 
     return (
