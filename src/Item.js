@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import App from './App.js';
+import Timer from './Timer.js';
 
 
 class Item extends Component {
@@ -58,9 +59,7 @@ class Item extends Component {
         <div key={idx}>
           <h3 key={idx}> {data.title} </h3>
           <img alt=" " src={data.src}/>
-          <div> Time </div>
-          <div> Amount </div>
-          <button>Bid!</button>
+          <Timer />
         </div>
       ])
     })
