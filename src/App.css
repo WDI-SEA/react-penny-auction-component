@@ -1,5 +1,12 @@
 .App {
+  text-align: center;
+  margin: 0 auto;
+}
 
+.header{
+  height: 200px;
+  padding: 20px;
+  background: yellow;
 }
 
 .Item{
