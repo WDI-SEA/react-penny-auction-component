@@ -1,24 +1,70 @@
 .App {
+
+}
+
+.Item{
+  display: inline-block;
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.Item h3{
+  height: 50px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.eachItem{
+  height: 350px;
+}
+.Bidder{
+  padding: 10px;
+
+}
+.Bidder div{
+
+}
+.Bidder button{
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background: none;
+  border: 1px solid black;
+}
+.green{
+  color: green;
+}
+.animation{
+  -webkit-animation: backgroundChange 4s infinite; /* Safari 4.0 - 8.0 */
+  animation: backgroundChange .5s infinite;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes backgroundChange {
+    from {background-color: red;}
+    to {background-color: none;}
 }
 
-.App-intro {
-  font-size: large;
+/* Standard syntax */
+@keyframes backgroundChange {
+    from {background-color: red;}
+    to {background-color: none;}
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.animationText{
+  -webkit-animation: textChange 4s infinite; /* Safari 4.0 - 8.0 */
+  animation: textChange .5s infinite;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes textChange {
+    from {color: red;}
+    to {color: none;}
+}
+
+/* Standard syntax */
+@keyframes textChange {
+    from {color: red;}
+    to {color: none;}
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }

@@ -29,19 +29,19 @@ class Item extends Component {
         src: "/img/50 Voucher Bids.jpg"
       },
       {
-        title: "Canon Pixma MG Series Wireless Printer",
+        title: "Canon Wireless Printer",
         src: "/img/Canon Pixma MG Series Wireless Printer.jpg"
       },
       {
-        title: "Cuisinart Convection Bread Maker",
+        title: "Cuisinart Bread Maker",
         src: "/img/Cuisinart Convection Bread Maker.jpg"
       },
       {
-        title: "Discrete 'Hide a Key' Sprinkler Head",
+        title: "'Hide a Key' Sprinkler Head",
         src: '/img/Discrete "Hide a Key" Sprinkler Head.jpg'
       },
       {
-        title: "Ultra-Soft 1800 Series Sheet Set",
+        title: "Ultra-Soft Sheet Set",
         src: "/img/Ultra-Soft 1800 Series Sheet Set.jpg"
       },
       {
@@ -56,7 +56,7 @@ class Item extends Component {
   render() {
     var mappedItems = this.state.itemArray.map(function(data, idx){
       return ([
-        <div key={idx}>
+        <div  className="col-xs-3 eachItem" key={idx}>
           <h3 key={idx}> {data.title} </h3>
           <img alt=" " src={data.src}/>
           <Timer />
@@ -64,7 +64,7 @@ class Item extends Component {
       ])
     })
     return (
-      <div className="App">
+      <div className="Item row">
           {mappedItems}
       </div>
     );
