@@ -33,7 +33,6 @@
 
 .saleItem {
     border: 1px solid orange;
-    width: 25%;
     height: 300px;
     display: inline-block;
 }
