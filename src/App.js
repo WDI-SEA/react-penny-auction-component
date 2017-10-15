@@ -15,44 +15,44 @@ class App extends Component {
         </p>
         
         <div>
-          <p>$10 Shell Gift Card.jpg</p>
-          <img src="/img/$10 Shell Gift Card.jpg" />
+          <p>Arrow</p>
+          <img src="/img/arrow.png" />
         </div>
         <div>
-          <p>$50 Walmart Gift Card.jpg</p>
-          <img src="/img/$50 Walmart Gift Card.jpg" />
+          <p>Blue Ring</p>
+          <img src="/img/blue-ring.png" />
         </div>
         <div>
-          <p>15 Voucher Bids.jpg</p>
-          <img src="/img/15 Voucher Bids.jpg" />
+          <p>Letter</p>
+          <img src="/img/letter.png" />
         </div>
         <div>
-          <p>250 Voucher Bids.jpg</p>
-          <img src="/img/250 Voucher Bids.jpg" />
+          <p>Magical Shield</p>
+          <img src="/img/magical-shield.png" />
         </div>
         <div>
-          <p>50 Voucher Bids.jpg</p>
-          <img src="/img/50 Voucher Bids.jpg" />
+          <p>Magical Sword</p>
+          <img src="/img/magical-sword.png" />
         </div>
         <div>
-          <p>Canon Pixma MG Series Wireless Printer.jpg</p>
-          <img src="/img/Canon Pixma MG Series Wireless Printer.jpg" />
+          <p>Raft</p>
+          <img src="/img/raft.png" />
         </div>
         <div>
-          <p>Cuisinart Convection Bread Maker.jpg</p>
-          <img src="/img/Cuisinart Convection Bread Maker.jpg" />
+          <p>White Sword</p>
+          <img src="/img/white-sword.png" />
         </div>
         <div>
-          <p>Discrete "Hide a Key" Sprinkler Head.jpg</p>
-          <img src='/img/Discrete "Hide a Key" Sprinkler Head.jpg' />
+          <p>Magical Rod</p>
+          <img src='/img/magical-rod.png' />
         </div>
         <div>
-          <p>Ultra-Soft 1800 Series Sheet Set.jpg</p>
-          <img src="/img/Ultra-Soft 1800 Series Sheet Set.jpg" />
+          <p>Boomerang</p>
+          <img src="/img/boomerang.png" />
         </div>
         <div>
-          <p>iPad Pro 9.7" 32GB WifFi.jpg</p>
-          <img src='/img/iPad Pro 9.7" 32GB WifFi.jpg' />
+          <p>Food</p>
+          <img src='/img/food.png' />
         </div>
 
       </div>
