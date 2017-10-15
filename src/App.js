@@ -6,14 +6,17 @@ class App extends Component {
   
   constructor(props){
     super(props);
+    let yourName = prompt('What is your name?');    
     this.state = {
-      auctionItems: props.auctionItems
+      auctionItems: props.auctionItems,
+      userName: yourName
     }
+
   }
   
   render() {
     let auctionItemsHtml = this.state.auctionItems.map((item, index) => (
-      <AuctionItem auctionItem = {item} key = {`${index}_${item.name}`}/>
+      <AuctionItem auctionItem = {item} userName = {this.state.userName} key = {`${index}_${item.name}`}/>
     ))
     return (
       

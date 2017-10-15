@@ -6,7 +6,7 @@ import './index.css';
 let auctionItems = [
  {
   name: '$10 Shell Gift Card',
-  image: "/img/$10 Shell Gift Card.jpg"  
+  image: "/img/$10 Shell Gift Card.jpg" 
  },  
  {
   name: '$50 Walmart Gift Card',
