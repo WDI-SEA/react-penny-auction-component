@@ -6,6 +6,7 @@
     "react-scripts": "0.8.5"
   },
   "dependencies": {
+    "lodash": "^4.17.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
@@ -14,5 +15,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "Today we're using React to build our own Penny Auction website. This repo contains a barebones React app and some images from the popular Penny Auction website <http://www.quibids.com/>.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justecii/react-penny-auction-component.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justecii/react-penny-auction-component/issues"
+  },
+  "homepage": "https://github.com/justecii/react-penny-auction-component#readme"
 }
