@@ -2,6 +2,7 @@
   "name": "penny-auction",
   "version": "0.1.0",
   "private": true,
+  "start": "nodemon index.js",
   "devDependencies": {
     "react-scripts": "0.8.5"
   },
