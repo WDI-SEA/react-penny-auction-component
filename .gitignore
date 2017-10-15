@@ -42,3 +42,4 @@ Temporary Items
 .nfs*
 
 # End of https://www.gitignore.io/api/osx,linux
+node_modules
