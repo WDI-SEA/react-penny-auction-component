@@ -41,22 +41,14 @@ export default class Countdown extends Component {
              userBidder= <div className="animationText"> You won! </div>
          }
 
-         let nonsence = (this.state.price === 0) ? (<div>Bid Today!</div>)
-          : (<div>you can do it!!!!</div>)
-
-         if(this.state.ticks === 0 && this.state.price === 0){
-             nonsence = <div> you could have won this </div>
-         }else if(this.state.ticks === 0 && this.state.price >= 1){
-             nonsence= <div className="animationText"> Congradulations! </div>
-         }
          return(
              <div className="bidder">
 
-                 <h1>{this.state.ticks}</h1>
+                 <h3 className="counter">{this.state.ticks}</h3>
                  <h4>Current Price: ${(this.state.price/100).toFixed(2)}</h4>
                  {userBidder}
                  <button className="button bid medium" disable={this.state.ticks === 0} onClick={(e) => this.bid(e)}>Bid!</button>
-                 <span>{nonsence}</span>
+
           </div>
          )
      }
