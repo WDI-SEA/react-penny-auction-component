@@ -1,60 +1,67 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Bid from './Bid.js'
 
 class App extends Component {
   render() {
+    var bid = <Bid data = '10' />
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>QuiBids</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        
-        <div>
-          <p>$10 Shell Gift Card.jpg</p>
-          <img src="/img/$10 Shell Gift Card.jpg" />
+        <div id='content'>
+          <div class='item'>
+            <p class='name'>$10 Shell Gift Card</p>
+            <img src="/img/$10 Shell Gift Card.jpg" />
+            {bid}
+          </div>
+          <div class='item'>
+            <p>$50 Walmart Gift Card.jpg</p>
+            <img src="/img/$50 Walmart Gift Card.jpg" />
+            {bid}
+          </div>
+          <div class='item'>
+            <p>15 Voucher Bids</p>
+            <img src="/img/15 Voucher Bids.jpg" />
+            {bid}
+          </div>
+          <div class='item'>
+            <p>250 Voucher Bids</p>
+            <img src="/img/250 Voucher Bids.jpg" />
+            {bid}
+          </div>
+          <div class='item'>
+            <p>50 Voucher Bids</p>
+            <img src="/img/50 Voucher Bids.jpg" />
+            {bid}
+          </div>
+          <div class='item'>
+            <p>Canon Pixma MG Series Wireless Printer</p>
+            <img src="/img/Canon Pixma MG Series Wireless Printer.jpg" />
+            {bid}
+          </div>
+          <div class='item'>
+            <p>Cuisinart Convection Bread Maker</p>
+            <img src="/img/Cuisinart Convection Bread Maker.jpg" />
+            {bid}
+          </div>
+          <div class='item'>
+            <p>Discrete "Hide a Key" Sprinkler Head</p>
+            <img src='/img/Discrete "Hide a Key" Sprinkler Head.jpg' />
+            {bid}
+          </div>
+          <div class='item'>
+            <p>Ultra-Soft 1800 Series Sheet Set</p>
+            <img src="/img/Ultra-Soft 1800 Series Sheet Set.jpg" />
+            {bid}
+          </div>
+          <div class='item'>
+            <p>iPad Pro 9.7" 32GB WifFi</p>
+            <img src='/img/iPad Pro 9.7" 32GB WifFi.jpg' />
+            {bid}
+          </div>
         </div>
-        <div>
-          <p>$50 Walmart Gift Card.jpg</p>
-          <img src="/img/$50 Walmart Gift Card.jpg" />
-        </div>
-        <div>
-          <p>15 Voucher Bids.jpg</p>
-          <img src="/img/15 Voucher Bids.jpg" />
-        </div>
-        <div>
-          <p>250 Voucher Bids.jpg</p>
-          <img src="/img/250 Voucher Bids.jpg" />
-        </div>
-        <div>
-          <p>50 Voucher Bids.jpg</p>
-          <img src="/img/50 Voucher Bids.jpg" />
-        </div>
-        <div>
-          <p>Canon Pixma MG Series Wireless Printer.jpg</p>
-          <img src="/img/Canon Pixma MG Series Wireless Printer.jpg" />
-        </div>
-        <div>
-          <p>Cuisinart Convection Bread Maker.jpg</p>
-          <img src="/img/Cuisinart Convection Bread Maker.jpg" />
-        </div>
-        <div>
-          <p>Discrete "Hide a Key" Sprinkler Head.jpg</p>
-          <img src='/img/Discrete "Hide a Key" Sprinkler Head.jpg' />
-        </div>
-        <div>
-          <p>Ultra-Soft 1800 Series Sheet Set.jpg</p>
-          <img src="/img/Ultra-Soft 1800 Series Sheet Set.jpg" />
-        </div>
-        <div>
-          <p>iPad Pro 9.7" 32GB WifFi.jpg</p>
-          <img src='/img/iPad Pro 9.7" 32GB WifFi.jpg' />
-        </div>
-
       </div>
     );
   }
