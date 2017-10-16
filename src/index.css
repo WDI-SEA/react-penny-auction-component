@@ -3,3 +3,15 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.cell {
+  display: inline-block;
+  margin: 10px;
+  border-color: lightgrey;
+  border-width: thin;
+  border-style: solid;
+}
+
+p {
+  font-size: 12px;
+}
