@@ -2,62 +2,103 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import ProductListings from './productListings';
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      products: [
+        { name: '$10 Shell Gift Card',
+          image: "/img/$10 Shell Gift Card.jpg",
+          timeStart: Date.now(),
+          timeLeft: 82400,
+          currentBid: 0.00 },
+        { name: '$50 Walmart Gift Card',
+          image: "/img/$50 Walmart Gift Card.jpg",
+          timeStart: Date.now(),
+          timeLeft: 82400,
+          currentBid: 0.00 },
+        { name: '15 Voucher Bids',
+          image: "/img/15 Voucher Bids.jpg",
+          timeStart: Date.now(),
+          timeLeft: 82400,
+          currentBid: 0.00 },
+        { name: '250 Voucher Bids',
+          image: "/img/250 Voucher Bids.jpg",
+          timeStart: Date.now(),
+          timeLeft: 82400,
+          currentBid: 0.00 },
+        { name: '50 Voucher Bids',
+          image: "/img/50 Voucher Bids.jpg",
+          timeStart: Date.now(),
+          timeLeft: 82400,
+          currentBid: 0.00 },
+        { name: 'Canon Pixma MG Series Wireless Printer',
+          image: "/img/Canon Pixma MG Series Wireless Printer.jpg",
+          timeStart: Date.now(),
+          timeLeft: 82400,
+          currentBid: 0.00 },
+        { name: 'Cuisinart Convection Bread Maker',
+          image: "/img/Cuisinart Convection Bread Maker.jpg",
+          timeStart: Date.now(),
+          timeLeft: 82400,
+          currentBid: 0.00 },
+        { name: 'Discrete "Hide a Key" Sprinkler Head',
+          image: '/img/Discrete "Hide a Key" Sprinkler Head.jpg',
+          timeStart: Date.now(),
+          timeLeft: 82400,
+          currentBid: 0.00 },
+        { name: 'Ultra-Soft 1800 Series Sheet Set',
+          image: "/img/Ultra-Soft 1800 Series Sheet Set.jpg",
+          timeStart: Date.now(),
+          timeLeft: 82400,
+          currentBid: 0.00 },
+        { name: 'iPad Pro 9.7" 32GB WifFi',
+          image: '/img/iPad Pro 9.7" 32GB WifFi.jpg',
+          timeStart: Date.now(),
+          timeLeft: 82400,
+          currentBid: 0.00 }
+      ]
+    }
+  }
+
   render() {
     return (
-      <div className="App">
+      <div className="App container">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Don't tell anyone this is a scam!</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        
-        <div>
-          <p>$10 Shell Gift Card.jpg</p>
-          <img src="/img/$10 Shell Gift Card.jpg" />
-        </div>
-        <div>
-          <p>$50 Walmart Gift Card.jpg</p>
-          <img src="/img/$50 Walmart Gift Card.jpg" />
-        </div>
-        <div>
-          <p>15 Voucher Bids.jpg</p>
-          <img src="/img/15 Voucher Bids.jpg" />
-        </div>
-        <div>
-          <p>250 Voucher Bids.jpg</p>
-          <img src="/img/250 Voucher Bids.jpg" />
-        </div>
-        <div>
-          <p>50 Voucher Bids.jpg</p>
-          <img src="/img/50 Voucher Bids.jpg" />
-        </div>
-        <div>
-          <p>Canon Pixma MG Series Wireless Printer.jpg</p>
-          <img src="/img/Canon Pixma MG Series Wireless Printer.jpg" />
-        </div>
-        <div>
-          <p>Cuisinart Convection Bread Maker.jpg</p>
-          <img src="/img/Cuisinart Convection Bread Maker.jpg" />
-        </div>
-        <div>
-          <p>Discrete "Hide a Key" Sprinkler Head.jpg</p>
-          <img src='/img/Discrete "Hide a Key" Sprinkler Head.jpg' />
-        </div>
-        <div>
-          <p>Ultra-Soft 1800 Series Sheet Set.jpg</p>
-          <img src="/img/Ultra-Soft 1800 Series Sheet Set.jpg" />
-        </div>
-        <div>
-          <p>iPad Pro 9.7" 32GB WifFi.jpg</p>
-          <img src='/img/iPad Pro 9.7" 32GB WifFi.jpg' />
-        </div>
+
+        <ProductListings products={this.state.products}
+                        addToBid={(productIndex) => this.addToBid(productIndex)}
+                        countdown={(productIndex) => this.countdown(productIndex)}
+                        addToTimeLeft={(productIndex) => this.addToTimeLeft(productIndex)}  />
 
       </div>
     );
   }
+
+  addToBid(productIndex) {
+    let products = this.state.products;
+    products[productIndex].currentBid += 0.01;
+    this.setState({products: products});
+  }
+
+  // addToTimeLeft(productIndex) {
+  //   let products = this.state.products;
+  //   products[productIndex].timeLeft += 10;
+  //   this.setState({products: products});
+  // }
+  //
+  // countdown(productIndex) {
+  //   let products = this.state.products;
+  //   products[productIndex].timeLeft -= 1;
+  //   this.setState({products: products});
+  // }
+
 }
 
 export default App;
