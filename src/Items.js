@@ -7,7 +7,7 @@ class Items extends Component {
     super(props)
 
     this.state = {
-		name: "Shell Gift Card",
+		name: "$10 Shell Gift Card",
 		image: "/img/$10 Shell Gift Card.jpg",
 		timeLeft: 10,
 		price: 1,
@@ -41,7 +41,8 @@ class Items extends Component {
   			<p className="time bold">00:00:{this.state.timeLeft}</p>
   			<p className="price bold">${this.state.price}</p>
   			<p>{this.state.user}</p>
-  			<button className='bid' type='button' onClick={(e) => this.makeBid(e)}>Bid Now</button>
+  			{this.state.timeLeft === 0 && <p className="time">Expired</p>}
+  			{this.state.timeLeft > 0 && <button className='bid' type='button' onClick={(e) => this.makeBid(e)}>Bid Now</button>}
   		</div>
   		)
   }

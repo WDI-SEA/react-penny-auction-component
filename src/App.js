@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Penny Auction</h1>
+        <h1>Dollar Auction</h1>
         <Items />
       </div>
     );
