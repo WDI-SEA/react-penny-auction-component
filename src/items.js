@@ -5,6 +5,7 @@ class Items extends Component {
   constructor(props) {
     super(props);
     this.state = ({
+      butt: "butt",
       itemList: [
         {
           item: '2nd Potion',
@@ -221,8 +222,29 @@ class Items extends Component {
   }
 
   render() {
+    console.log(this.state);
     return (
-      <div className="App">
+      <div className="itemSection">
+
+
+        {
+          this.state.itemList.map((item,index) => 
+            <div key={index} className="componentWrapper">
+              <h2>{item.item}</h2>
+              <img src={`img/${item.link}`} alt="" />
+              <div class="itemInfo">
+                <p>
+                  High Bid: {item.currentPrice} x {<img src="img/rupee.png" alt=""/>}
+                </p>
+              </div>
+              <div class="itemInfo"><p>High Bidder: {item.currentHighBidder}</p></div>
+              <div class="itemInfo"><p>Time Left: {item.secondsLeft}</p></div>
+              <button>{<img src="img/rupee.png" alt=""/>} <div>+ 1</div></button>
+            </div>
+          )
+        }
+            
+
         
       </div>
     );
