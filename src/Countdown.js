@@ -13,12 +13,6 @@ class Countdown extends Component {
             this.timer = setInterval(this.tick, 1000)
         }
     }
-    // componentDidMount(){
-    //     this.timerId = setInterval(() => this.tick(), this.props.ms);
-    // }
-    // componentWillUnmount(){
-    //     clearInterval(this.timerId)
-    // }
     tick(){
         let ticks = this.state.ticks -1;
         this.setState({
@@ -41,12 +35,12 @@ class Countdown extends Component {
         if (this.state.price === 0) {
             userBidder = <div>Nobody has Bid yet!</div>
         } else {
-            userBidder = <div>Viper!</div>
+            userBidder = <div>Viper has Bid!</div>
         }
         if(this.state.ticks === 0 && this.state.price === 0){
             userBidder = <div> Nobody bid on this item </div>
         }else if(this.state.ticks === 0 && this.state.price >= 1){
-            userBidder= <div className="animationText"> Viper won! </div>
+            userBidder= <div> Viper won! </div>
         }
         return(
             <div className="bidder">

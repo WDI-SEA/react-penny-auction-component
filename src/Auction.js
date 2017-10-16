@@ -6,74 +6,46 @@ import Countdown from './Countdown'
 class Auction extends Component {
     constructor(props) {
         super(props)
-//     var sale = {
-//         name: '$10 Shell Gift Card',
-//         img: '/img/$10 Shell Gift Card.jpg',
-//         price: 0,
-        
-//     }   
-//     this.state = {
-//         item: sale.name,
-//         image: sale.img,
-//         price: (sale.price),
-//         intro: 10
-//     }
-//     //bind this for function
-//     this.addBid = this.addBid.bind(this);
-//     this.resetTimer = this.resetTimer(this);
-// }
-
-
-//     addBid(e) {
-//         e.preventDefault();
-//         this.setState({
-//             price: parseInt(this.state.price)+ 1,
-//         });
-//     }
-//     resetTimer(e) {
-//         this.setState({
-//             time: 10
-//         });
     this.items = [
         {
-            title: "$10 Shell Gift Card",
-            src: "/img/$10 Shell Gift Card.jpg"
+            title: "Rare Dragon Eggs",
+            src: "/img/dragon_eggs.png"
         },
         {
-            title: "$50 Walmart Gift Card",
-            src: "/img/$50 Walmart Gift Card.jpg"
+            title: "Fine Dornish Wine",
+            src: "/img/wine.png"
         },
         {
-            title: "15 Voucher Bids",
-            src: "/img/15 Voucher Bids.jpg"
+            title: "Kingsguard Helm",
+            src: "/img/helm.png"
         },
         {
-            title: "250 Voucher Bids",
-            src: "/img/250 Voucher Bids.jpg"
+            title: "Pure Steel Crown Holder",
+            src: "/img/crown-holder.png"
         },
         {
-            title: "50 Voucher Bids",
-            src: "/img/50 Voucher Bids.jpg"
+            title: "Dothraki Warhorse",
+            src: "/img/horse.png"
         },
         {
-            title: "Canon Wireless Printer",
-            src: "/img/Canon Pixma MG Series Wireless Printer.jpg"
+            title: "Valyrian Steel Corkscrew",
+            src: "/img/corkscrew.png"
         },
         {
-            title: "Cuisinart Bread Maker",
-            src: "/img/Cuisinart Convection Bread Maker.jpg"
+            title: "Direwolf Cub",
+            src: "/img/direwolf.png"
         },
         {
-            title: "'Hide a Key' Sprinkler Head",
-            src: '/img/Discrete "Hide a Key" Sprinkler Head.jpg'
+            title: "Faceless Men Contract",
+            src: '/img/jaquen.png'
         },
         {
-            title: "Ultra-Soft Sheet Set",
-            src: "/img/Ultra-Soft 1800 Series Sheet Set.jpg"
+            title: "Live Show with DJ Hodor",
+            src: "/img/hodor.png"
         },
         {
-            title: "iPad Pro 9.7 32GB WifFi ",
-            src: '/img/iPad Pro 9.7" 32GB WifFi.jpg'
+            title: "Real Valyrian Steel Sword",
+            src: '/img/sword.png'
         }
         ]
         this.state = {
@@ -86,7 +58,7 @@ class Auction extends Component {
             return ([
                 <div className="saleItem"key={id}>
                     <p key={id}>{data.title}</p>
-                    <img src={data.src} alt="Great Item"/>
+                    <img className="itemImage" src={data.src} alt="Great Item"/>
                     <Countdown />
                 </div>
             ])
