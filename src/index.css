@@ -2,4 +2,31 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  text-align: center;
+  font-size: 18px;
+}
+
+.item {
+	border: solid black 1px;
+	display: inline-block;
+	text-align: center;
+	width: 250px;
+}
+
+.time {
+	color: red;
+}
+
+.price {
+	color: green;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+button {
+	background: orange;
+	color: white;
+	font-size: 24px;
 }
