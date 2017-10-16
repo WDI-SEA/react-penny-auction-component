@@ -1,57 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+body{
+  font-size: 13px;
+  line-height: 24px;
+  color: #383838;
+  text-align: left;
+}
+
 .App {
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.header {
+    background-color: #f1f1f1;
+    padding: 50px;
+    text-align: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.auction-item-wrapper{
+  width: 165px;
+  height: 330px;
+  text-align: center;
+  float: left;
+  border: solid 1px #bfbfbf;
+  -webkit-border-radius: 8px;
+  margin: 0 9px 20px 9px;
+  position: relative;
 }
 
-.App-intro {
-  font-size: large;
+.normal {
+  font-weight: normal;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+*{
+  padding: 0;
+  margin: 0;
 }
 
-*, *:before, *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+div{
+  display: block;
 }
 
-.clearfix:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
-     }
-.clearfix { display: inline-block; }
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
-
-.row {
-    margin: 0 auto;
-    max-width: 1000px;
-    width: 100%;
+h5.auction-item-wrapper{
+  height: 43px;
+  padding: 5px;
+  margin: 0 0 10px 0;
+  border-bottom: solid 1px #bfbfbf;
+  line-height:22px;
+  overflow:hidden;
+  width: 158px;
 }
-
-.column {
-    float: left;
-    padding: 0 15px;
+div.auction-item-wrapper>div>h5 {
+  display: inline-block;
+  vertical-align: middle;
+  word-wrap: break-word;
 }
+h5{
+  font-size: 14px;
+  font-weight: bold;
+}
+.home{
+  position: relative;
+  border-radius: 8px 8px 0 0;
+  width: 982px;
+  float: left;
+  border-left: solid 1px #d1d1d1;
+  border-right: soild 1px #d1d1d1;
+  box-shadow: 0 1px 6px 0 #b8b8b8;
+  min-height: 500px;
+}
+.button{
+  background-color: #e56400;
+  color: #fff;
+  text-shadow: 0 1px 2px #693100;
+  border-color: #fc7105;
+  padding-left: 0 12px;
+  display: inline-block;
+  border-radius: 6px;
+  letter-spacing: -0.02em;
+  box-shadow: 0 1px 4px 0 #c0c0c0;
+  outline: 0;
+  font-weight: 600;
+  text-align: center;
+}
+.bid{
 
-.span_4 {
-    width: 33.3333%;
+}
+.medium{
+  min-width: 80px!important;
+
 }

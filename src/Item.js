@@ -61,16 +61,16 @@ export default class Item extends Component {
     console.log(this.state.junk);
     var junkForAuction = this.state.junk.map(function(data, id){
             return ([
-                <div className="saleItem"key={id}>
+                <div className="auction-item-wrapper normal"key={id}>
 
-                    <p key={id}>{data.name}</p>
+                    <h5 className="auction-item-title" key={id}>{data.name}</h5>
                     <img src={data.img} alt="Bahahahahaha"/>
                     <Countdown />
                 </div>
             ])
         })
         return (
-            <div>
+            <div className="home">
                 {junkForAuction}
             </div>
     )

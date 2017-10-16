@@ -32,27 +32,22 @@ export default class Countdown extends Component {
      }
 
      render(){
-         let userBidder = null;
-         if (this.state.price === 0) {
-             userBidder = <div>Bid-less!</div>
-         } else {
-             userBidder = <div>Bid! Bid! Bid!</div>
-         }
+         let userBidder = (this.state.price === 0) ? (<div>Be the first to bid!!!!!!</div>)
+         :(<div>Bid! Bid! Bid!</div>);
+
          if(this.state.ticks === 0 && this.state.price === 0){
              userBidder = <div> Nobody bid on this item </div>
          }else if(this.state.ticks === 0 && this.state.price >= 1){
              userBidder= <div className="animationText"> You won! </div>
          }
-         let Bidderbutton = null;
-         if (this.state.price === 0) {
-             Bidderbutton = <div>Bid Here!</div>
-         } else {
-             Bidderbutton = <div>you can do it!!!!</div>
-         }
+
+         let nonsence = (this.state.price === 0) ? (<div>Bid Today!</div>)
+          : (<div>you can do it!!!!</div>)
+
          if(this.state.ticks === 0 && this.state.price === 0){
-             Bidderbutton = <div> you could have won this </div>
+             nonsence = <div> you could have won this </div>
          }else if(this.state.ticks === 0 && this.state.price >= 1){
-             Bidderbutton= <div className="animationText"> Congradulations! </div>
+             nonsence= <div className="animationText"> Congradulations! </div>
          }
          return(
              <div className="bidder">
@@ -60,8 +55,8 @@ export default class Countdown extends Component {
                  <h1>{this.state.ticks}</h1>
                  <h4>Current Price: ${(this.state.price/100).toFixed(2)}</h4>
                  {userBidder}
-                 <button disable={this.state.ticks === 0} onClick={(e) => this.bid(e)}>Bid!</button>
-                 <span>{Bidderbutton}</span>
+                 <button className="button bid medium" disable={this.state.ticks === 0} onClick={(e) => this.bid(e)}>Bid!</button>
+                 <span>{nonsence}</span>
           </div>
          )
      }
