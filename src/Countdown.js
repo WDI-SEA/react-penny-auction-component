@@ -43,7 +43,7 @@ class Countdown extends Component {
             userBidder= <div> Viper won! </div>
         }
         return(
-            <div className="bidder">
+            <div>
                 <h1>{this.state.ticks}</h1>
                 <h4>Current Price: ${(this.state.price/100).toFixed(2)}</h4>
                 {userBidder}
