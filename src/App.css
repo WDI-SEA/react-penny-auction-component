@@ -22,3 +22,11 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.Auction {
+  display: inline-block;
+  margin: .25em;
+  padding: .5em;
+  border: 1px solid black;
+  width: 200px;
+}
