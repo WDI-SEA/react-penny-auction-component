@@ -3,7 +3,7 @@ import './App.css';
 
 
 
-class Timer extends Component {
+class Bid extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -29,7 +29,7 @@ class Timer extends Component {
   bidTimer() {
     let updateTime = this.state.timer - 1
     this.setState({
-      timer: updateTime
+      timer: "0" + updateTime
     })
     if (this.state.timer === 0) {
       this.setState({
@@ -46,24 +46,31 @@ class Timer extends Component {
   placeBid(e){
     e.preventDefault();
     var counter;
-    clearInterval(counter);
     counter = setInterval(()=>{this.bidTimer()}, 1000);
     this.changeBidder();
     this.addBid();
-  }
+    this.setState({
+      timer: 10
+    })
+   }
 
   render(){
-
     return (
       <div>
         <p className="timer">00:00:{this.state.timer}</p>
         <p className="price">${this.state.newPrice.toFixed(2)}</p>
         <p className="bidder">{this.state.bidders[this.state.bidderIndex]}</p>
-        <button onClick={(e) => this.placeBid(e)}>Bid!</button>
+        <button type="button" className="btn btn-warning" onClick={(e) => this.placeBid(e)}>Place Bid</button>
       </div>
     )
   }
 }
 
 
-export default Timer;
+export default Bid;
+
+
+
+
+
+// clearInterval(counter);

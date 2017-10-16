@@ -1,3 +1,17 @@
+img {
+  height: 100px;
+  width: 50%;
+}
+
+h4 {
+  color: blue;
+}
+
+#logo {
+height: 100px;
+width: 300px;
+}
+
 .App {
   text-align: center;
 }
@@ -8,7 +22,7 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: gray;
   height: 150px;
   padding: 20px;
   color: white;
@@ -18,18 +32,8 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-img {
-  height: 100px;
-  width: 50%;
-}
-
 .container {
-  width: 250px;
+  width: 225px;
   height: 375px;
   border: 1px solid black;
   border-radius: 7%;
@@ -41,18 +45,23 @@ img {
 
 .timer {
   color: red;
+  font-weight: 700;
 }
 
 .price {
   color: green;
+  font-weight: 700;
 }
 
 .bidder {
   color: gray;
+  font-weight: 500;
 }
 
-
-
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 
 
 

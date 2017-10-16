@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Timer from './Timer.js'
+import Bid from './Bid.js'
 
 
 class App extends Component {
@@ -16,12 +16,16 @@ class App extends Component {
     let allItemsArr = this.state.itemsArr.map((itemData, index) => (
         <div className="container" key={index}>
           <h4 key={index}> {itemData.title} </h4>
+          <hr/>
           <img alt={itemData.title} src={itemData.image}/>
-          <Timer price={itemData.price} users={this.state.bidders}/>
+          <Bid price={itemData.price} users={this.state.bidders}/>
         </div>
       ))
     return (
       <div>
+        <div className="App-header">
+          <img id="logo" alt="Logo" src="../img/logo.png"/>
+        </div>
         {allItemsArr}
       </div>
     );

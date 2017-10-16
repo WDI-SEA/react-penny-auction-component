@@ -29,10 +29,11 @@ var itemsForAuction = [
   title: "50 Voucher Bids",
   image: "/img/50 Voucher Bids.jpg",
   price: 2.50
-},{
-  title: "Canon Pixma MG Series Wireless Printer",
-  image: "/img/Canon Pixma MG Series Wireless Printer.jpg",
-  price: 10.00
+},
+{
+  title: "iPad Pro 9.7 32 GB WiFi",
+  image: "/img/iPad Pro 9.7 32 GB WifFi.jpg",
+  price: 50.00
 },
 {
   title: "Cuisinart Convection Bread Maker",
@@ -50,9 +51,9 @@ var itemsForAuction = [
   price: 5.00
 },
 {
-  title: "iPad Pro 9.7 32 GB WiFi",
-  image: "/img/iPad Pro 9.7 32 GB WifFi.jpg",
-  price: 50.00
+  title: "Canon Pixma MG Series Wireless Printer",
+  image: "/img/Canon Pixma MG Series Wireless Printer.jpg",
+  price: 10.00
 },
 ]
 
