@@ -1,24 +1,80 @@
 .App {
-  text-align: center;
+    text-align: center;
+    font-family: 'New Rocker', cursive;
+    background-color: rgb(255, 225, 77);
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+    border-radius: 40px;
+    height: 100%;
+    float: left;
+    margin: 10px 0px 0px 50px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+    background-color: rgb(255, 225, 77);
+    height: 150px;
+    font-family: 'Metal Mania', cursive;
+}
+
+.App-header h2 {
+    color: #993737;
+    font-size: 2.4em;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+.App-header p {
+    color: #993737;
+}
+
+.header {
+    display: inline;
+    vertical-align: middle;
 }
 
 .App-intro {
-  font-size: large;
+    font-size: large;
 }
 
-@keyframes App-logo-spin {
+.mainBody {
+    width: 100%;
+    margin-top: 0;
+}
+
+.salesField {
+    background-color: white;
+    max-width: 98%;
+    margin: 0 auto;
+    border-radius: 40px;
+}
+
+.salesField h2 {
+    color: rgb(255, 225, 77);
+    text-shadow: 2px 2px #000000;
+    text-align: left;
+    margin-left: 10%;
+    font-size: 2em;
+}
+
+.saleItem {
+    border: 1px solid orange;
+    background-color: white;
+    height: 400px;
+    width: 250px;
+    display: inline-block;
+    margin-top: 10px;
+    vertical-align: top;
+}
+
+.itemImage {
+    max-width: 160px;
+    max-height: 140px;
+}
+
+
+/* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+} */
