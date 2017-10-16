@@ -57,16 +57,16 @@ var itemsForAuction = [
 ]
 
   var people = [
+    "Place First Bid",
     "BidBoi95",
-    "WNRWNRCKNDNR",
-    "I-beat-you",
+    "WnRWnRCkNDnR",
     "Il0v3M0nY",
     "sweetiePie88",
+    "needajobrealbad",
     "UR_MOM_WINS",
     "shy_GUY",
     "Wario_IMA_gonna_win",
     "MY-BIDNESS",
-    "needajobrealbad",
   ]
 
 ReactDOM.render(<App
