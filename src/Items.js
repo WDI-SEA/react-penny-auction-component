@@ -11,7 +11,7 @@ class Items extends Component {
 		image: props.item.image,
 		timeLeft: 10,
 		price: 1,
-		user: "Evan"
+		user: "No Bids"
     }
 
   	setInterval(() => {
@@ -28,7 +28,8 @@ class Items extends Component {
   	let newPrice = this.state.price + 1;
   	this.setState({
   		price: newPrice,
-  		timeLeft: 10
+  		timeLeft: 10,
+  		user: "Evan"
   	})
   }
 

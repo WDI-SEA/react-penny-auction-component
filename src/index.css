@@ -11,6 +11,8 @@ body {
 	display: inline-block;
 	text-align: center;
 	width: 250px;
+	height: 400px;
+	margin: 10px;
 }
 
 .time {
