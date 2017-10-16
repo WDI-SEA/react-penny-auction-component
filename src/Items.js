@@ -7,8 +7,8 @@ class Items extends Component {
     super(props)
 
     this.state = {
-		name: "$10 Shell Gift Card",
-		image: "/img/$10 Shell Gift Card.jpg",
+		name: props.item.name,
+		image: props.item.image,
 		timeLeft: 10,
 		price: 1,
 		user: "Evan"

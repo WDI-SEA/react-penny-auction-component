@@ -3,76 +3,46 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 
-var items = [
+let items = [
 	{
 		name: "$10 Shell Gift Card",
-		image: "/img/$10 Shell Gift Card.jpg",
-		timeLeft: 10,
-		price: 1,
-		user: "Evan"
+		image: "/img/$10 Shell Gift Card.jpg"
 	},
 	{
 		name: "$50 Walmart Gift Card",
-		image: "/img/$50 Walmart Gift Card.jpg",
-		timeLeft: 10,
-		price: 1,
-		user: "Evan"
+		image: "/img/$50 Walmart Gift Card.jpg"
 	},
 	{
 		name: "15 Voucher Bids.jpg",
-		image: "/img/15 Voucher Bids.jpg",
-		timeLeft: 10,
-		price: 1,
-		user: "Evan"
+		image: "/img/15 Voucher Bids.jpg"
 	},
 	{
 		name: "250 Voucher Bids",
-		image: "/img/250 Voucher Bids.jpg",
-		timeLeft: 10,
-		price: 1,
-		user: "Evan"
+		image: "/img/250 Voucher Bids.jpg"
 	},
 	{
 		name: "50 Voucher Bids",
-		image: "/img/50 Voucher Bids.jpg",
-		timeLeft: 10,
-		price: 1,
-		user: "Evan"
+		image: "/img/50 Voucher Bids.jpg"
 	},
 	{
 		name: "Canon Pixma MG Series Wireless Printer",
-		image: "/img/Canon Pixma MG Series Wireless Printer.jpg",
-		timeLeft: 10,
-		price: 1,
-		user: "Evan"
+		image: "/img/Canon Pixma MG Series Wireless Printer.jpg"
 	},
 	{
 		name: "Cuisinart Convection Bread Maker",
-		image: "/img/Cuisinart Convection Bread Maker.jpg",
-		timeLeft: 10,
-		price: 1,
-		user: "Evan"
+		image: "/img/Cuisinart Convection Bread Maker.jpg"
 	},
 	{
 		name: "Discrete 'Hide a Key' Sprinkler Head",
-		image: '/img/Discrete "Hide a Key" Sprinkler Head.jpg',
-		timeLeft: 10,
-		price: 1,
-		user: "Evan"
+		image: '/img/Discrete "Hide a Key" Sprinkler Head.jpg'
 	},
 	{
 		name: "Ultra-Soft 1800 Series Sheet Set",
-		image: "/img/Ultra-Soft 1800 Series Sheet Set.jpg",
-		timeLeft: 10,
-		price: 1,
-		user: "Evan"
+		image: "/img/Ultra-Soft 1800 Series Sheet Set.jpg"
 	},
 	{
 		name: 'iPad Pro 9.7" 32GB WiFi',
-		image: '/img/iPad Pro 9.7" 32GB WifFi.jpg',
-		timeLeft: 10,
-		price: 1,
-		user: "Evan"
+		image: '/img/iPad Pro 9.7" 32GB WifFi.jpg'
 	}
 ]
 
