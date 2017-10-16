@@ -1,63 +1,75 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+// let bidTimer;
+
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      bidders: props.users,
+      itemsArr: props.items,
+      price: props.items[0].price,
+      bidderIndex: 0,
+      timer: 10,
+      newPrice: props.items[0].price
+    }
+  }
+  changeBidder(){
+    if (this.state.bidderIndex < 9) {
+      let newIndex = this.state.bidderIndex + 1;
+      this.setState({
+        bidderIndex: newIndex
+      })
+    } else {
+      this.setState({
+        bidderIndex: 0
+      })
+    }
+  }
+  bidTimer() {
+    let updateTime = this.state.timer - 1
+    this.setState({
+      timer: updateTime
+    })
+    if (this.state.timer <= 0){
+      clearInterval();
+    }
+  }
+  addBid() {
+    let updatedPrice = this.state.newPrice + .01
+    this.setState({
+      newPrice: updatedPrice
+    })
+  }
+  placeBid(e){
+    e.preventDefault();
+    setInterval(function(){
+      this.bidTimer()}, 1000);
+    this.changeBidder();
+    this.addBid();
+  }
+
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        
-        <div>
-          <p>$10 Shell Gift Card.jpg</p>
-          <img src="/img/$10 Shell Gift Card.jpg" />
-        </div>
-        <div>
-          <p>$50 Walmart Gift Card.jpg</p>
-          <img src="/img/$50 Walmart Gift Card.jpg" />
-        </div>
-        <div>
-          <p>15 Voucher Bids.jpg</p>
-          <img src="/img/15 Voucher Bids.jpg" />
-        </div>
-        <div>
-          <p>250 Voucher Bids.jpg</p>
-          <img src="/img/250 Voucher Bids.jpg" />
-        </div>
-        <div>
-          <p>50 Voucher Bids.jpg</p>
-          <img src="/img/50 Voucher Bids.jpg" />
-        </div>
-        <div>
-          <p>Canon Pixma MG Series Wireless Printer.jpg</p>
-          <img src="/img/Canon Pixma MG Series Wireless Printer.jpg" />
-        </div>
-        <div>
-          <p>Cuisinart Convection Bread Maker.jpg</p>
-          <img src="/img/Cuisinart Convection Bread Maker.jpg" />
-        </div>
-        <div>
-          <p>Discrete "Hide a Key" Sprinkler Head.jpg</p>
-          <img src='/img/Discrete "Hide a Key" Sprinkler Head.jpg' />
-        </div>
-        <div>
-          <p>Ultra-Soft 1800 Series Sheet Set.jpg</p>
-          <img src="/img/Ultra-Soft 1800 Series Sheet Set.jpg" />
-        </div>
-        <div>
-          <p>iPad Pro 9.7" 32GB WifFi.jpg</p>
-          <img src='/img/iPad Pro 9.7" 32GB WifFi.jpg' />
-        </div>
-
+      <div className="container">
+        <h3>{this.state.itemsArr[0].title}</h3>
+        <img alt="item" src={this.state.itemsArr[0].image}/>
+        <p className="timer">00:00:{this.state.timer}</p>
+        <p className="price">${this.state.newPrice.toFixed(2)}</p>
+        <p className="bidder">{this.state.bidders[this.state.bidderIndex]}</p>
+        <button onClick={(e) => this.placeBid(e)}>Bid!</button>
       </div>
     );
   }
 }
+
+
+
+
+
+
+
 
 export default App;

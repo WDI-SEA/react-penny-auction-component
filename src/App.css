@@ -22,3 +22,39 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+.container {
+  width: 200px;
+  height: 325px;
+  border: 1px solid black;
+  border-radius: 7%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.timer {
+  color: red;
+}
+
+.price {
+  color: green;
+}
+
+.bidder {
+  color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*end*/
