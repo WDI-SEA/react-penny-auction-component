@@ -17,19 +17,24 @@ class Timer extends Component {
       let timer = setInterval(this.tick,1000);
       this.setState({
         timer:timer
-    });
-        
+    });     
   }
 
   componentWillUnmount(){
     this.clearInterval(this.state.timer);
   }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      secondsLeft:10
+    })
+  }
   
   tick(){
     if(this.state.secondsLeft>0){
-        this.setState({
-            secondsLeft: this.state.secondsLeft - 1
-        });
+      this.setState({
+          secondsLeft: this.state.secondsLeft - 1
+      });
     }
   }
 
